@@ -1,0 +1,19 @@
+.section {
+    min-height: 600px;
+    position: relative;
+    background: var(--background);
+    width: 100%;
+    padding: 1rem 3rem;
+    @media screen and (max-width: 1000px) {
+        min-height: 300px;
+    }
+    .title{
+        text-align: center;
+        --color: black;
+    }
+}
+.section-ctr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

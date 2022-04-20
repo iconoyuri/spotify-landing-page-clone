@@ -1,0 +1,129 @@
+.spotify-menu {
+    --height: 5rem;
+    color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+    height: var(--height);
+    width: 100%;
+    // opacity: 1;
+    .wrapper {
+        --width: 1200px;
+        width: var(--width);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto 80px;
+        // opacity: 1;
+        @media screen and (max-width: 1200px) {
+            --width: 1000px;
+            @media screen and (max-width: 1000px) {
+                --width: 760px;
+            }
+        }
+        .btn-menu {
+            z-index: 4;
+            @media screen and(min-width: 1000px) {
+                display: none;
+            }
+        }
+        .menu-items {
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            right: -8rem;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s, right 0.4s;
+            --size: 2.4rem;
+            font-size: var(--size);
+            width: 27rem;
+            height: 100vh;
+            background-color: rgb(0, 0, 0);
+            padding: 20px 30px;
+            ul {
+                margin: 0;
+                padding: 0;
+                li {
+                    color: var(--color);
+                    list-style-type: none;
+                    padding: 2px 0;
+                    cursor: pointer;
+                    &:hover {
+                        color: var(--hover-color);
+                    }
+                }
+            }
+            .separation-line {
+                color: var(--color);
+                --size: 1.3rem;
+                margin: 20px 0 20px 0;
+                font-size: var(--size);
+                transform: rotate(-90deg) translateY(5px);
+                display: inline-block;
+            }
+            .logo {
+                position: absolute;
+                bottom: 50px;
+            }
+            .curtain {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: -1;
+                pointer-events: inherit;
+                background-color: inherit;
+                opacity: 0.2;
+            }
+            @media screen and (min-width: 1000px) {
+                position: static;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                opacity: 1;
+                height: auto;
+                --size: 1rem;
+                padding: 0px;
+                width: auto;
+                background-color: inherit;
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 2.5rem;
+                }
+                .separation-line {
+                    transform: rotate(0deg);
+                    margin: 0 30px;
+                    font-size: var(--size);
+                }
+                .logo {
+                    display: none;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        --height: 3rem;
+        opacity: 1;
+    }
+}
+
+.logo {
+    svg {
+        width: 120px;
+        fill: var(--color);
+        cursor: pointer;
+    }
+}
+
+// nav {
+//     --background-color: black;
+//     --color: white;
+// }

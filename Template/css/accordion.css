@@ -1,0 +1,92 @@
+@import url("//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "circular std book";
+}
+
+.accordion dd,
+.accordion__panel {
+  background-color: #fff;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.accordion p {
+  padding: 0em 2em;
+}
+
+.accordion {
+  position: relative;
+  background-color: #fff;
+}
+
+.accordionTitle,
+.accordion__Heading {
+  background-color: white;
+  background-color: #dedfdf;
+  font-weight: 700;
+  padding: 2em;
+  display: block;
+  text-decoration: none;
+  color: #000;
+  border-top: 1px solid #d1d2d2;
+}
+
+.accordionTitle:before,
+.accordion__Heading:before {
+  content: "";
+  background-image: url(../src/chevron-down.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  width: 20px;
+  height: 20px;
+  font-size: 1.5em;
+  line-height: 0.5em;
+  float: right;
+}
+
+.accordionTitle:hover,
+.accordion__Heading:hover {
+  background-color: #c4c6c6;
+}
+
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+  background-color: white;
+}
+
+.accordionTitleActive:before,
+.accordionTitle.is-expanded:before {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+  -webkit-transition: max-height .5s;
+  transition: max-height .5s;
+}
+
+@media screen and (min-width: 48em) {
+  .accordionItem {
+    max-height: 15em;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+}
+
+.accordionItem.is-collapsed {
+  max-height: 0;
+}
+
+.no-js .accordionItem.is-collapsed {
+  max-height: auto;
+}
+/*# sourceMappingURL=accordion.css.map */

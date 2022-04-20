@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,UADM,CACN,MAAM,CAAA;EACF,aAAa,EAAE,CAAC;EAChB,cAAc,EAAE,CAAC;CACpB;;AAJL,AAKI,UALM,CAKN,UAAU,CAAC;EACP,MAAM,EAAE,iBAAiB;EACzB,OAAO,EAAE,YAAY;CACxB",
+    "sources": [
+        "../scss/section-4.scss"
+    ],
+    "names": [],
+    "file": "section-4.css"
+}

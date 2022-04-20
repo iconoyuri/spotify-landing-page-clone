@@ -1,0 +1,11 @@
+.section-5 {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-5 .round-button {
+  --size: 1rem;
+}
+/*# sourceMappingURL=section-5.css.map */

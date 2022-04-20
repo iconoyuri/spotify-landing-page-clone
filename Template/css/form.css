@@ -1,0 +1,378 @@
+.container {
+  --size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+}
+
+.container .input-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.7rem;
+  --border-color: black;
+}
+
+.container .input-block label {
+  font-weight: bold;
+  display: block;
+}
+
+.container .input-block label i {
+  font-size: calc(var(--size) * 0.8);
+}
+
+.container .input-block .input {
+  width: 100%;
+  padding: 1rem;
+  font-size: var(--size);
+  border-radius: 3px;
+  border: 1px solid #0007;
+}
+
+.container .input-block .input:hover {
+  border: 1.5px solid var(--border-color);
+}
+
+.container .input-block .input:focus {
+  border: 2px solid var(--border-color);
+}
+
+.container .input-block span {
+  display: block;
+  color: red;
+  visibility: hidden;
+}
+
+.container .date-block {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .8fr 2fr 1fr;
+      grid-template-columns: .8fr 2fr 1fr;
+  justify-items: center;
+  grid-gap: 1.5rem;
+}
+
+.container .date-block > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.7rem;
+  --border-color: #000;
+}
+
+.container .date-block > div input,
+.container .date-block > div select {
+  width: 100%;
+  padding: 1rem;
+  font-size: var(--size);
+  border-radius: 3px;
+  border: 1px solid #0007;
+}
+
+.container .date-block > div input:hover,
+.container .date-block > div select:hover {
+  border: 1.5px solid var(--border-color);
+}
+
+.container .date-block > div input:focus,
+.container .date-block > div select:focus {
+  border: 2px solid var(--border-color);
+}
+
+.container .date-block .month-block {
+  position: relative;
+}
+
+.container .date-block .month-block select {
+  color: #0007;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.container .date-block .month-block i {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.7rem;
+  color: #0007;
+}
+
+.container .radio-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.container .radio-block .radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-left: 1.7rem;
+  margin-top: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container .radio-block .radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.container .radio-block .radio input:checked ~ .checkmark {
+  background-color: var(--hover-color);
+}
+
+.container .radio-block .radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .radio-block .radio input:focus ~ .checkmark::before {
+  opacity: 1;
+}
+
+.container .radio-block .radio .checkmark {
+  --size: 16px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  left: 0;
+  height: var(--size);
+  width: var(--size);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.container .radio-block .radio .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.container .radio-block .radio .checkmark::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  left: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid black;
+  opacity: 0;
+}
+
+.container .radio-block .radio:hover input ~ .checkmark {
+  border-color: var(--hover-color);
+}
+
+.container .checkbox-block {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+.container .checkbox-block .checkbox {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .checkbox-block .checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container .checkbox-block .checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkbox-block .checkbox input:checked ~ .checkmark {
+  background-color: var(--hover-color);
+}
+
+.container .checkbox-block .checkbox input:focus ~ .checkmark::before {
+  opacity: 1;
+}
+
+.container .checkbox-block .checkbox .checkmark {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  --size: 18px;
+  top: 0;
+  left: 0;
+  height: var(--size);
+  width: var(--size);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.container .checkbox-block .checkbox .checkmark:after {
+  left: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container .checkbox-block .checkbox .checkmark::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  left: -4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 2px solid black;
+  opacity: 0;
+}
+
+.container .checkbox-block .checkbox:hover input ~ .checkmark {
+  border-color: var(--hover-color);
+}
+
+.container .privacy-policy {
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.container .privacy-policy .privacy-link {
+  text-decoration: underline;
+  color: var(--color);
+}
+
+.container .log-in {
+  font-size: 1rem;
+}
+
+.container .sign-in-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
+}
+
+.container .sign-in-button .round-button {
+  color: black;
+  letter-spacing: 0;
+  text-align: center;
+  display: block;
+  position: relative;
+  width: auto;
+  padding: calc(var(--size) * 1.2) calc(var(--size) * 2.9);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+
+.container .sign-in-button .round-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container .sign-in-button .round-button:active::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -5px;
+  width: 105%;
+  height: 105%;
+  border: 2px solid black;
+  border-radius: 200px;
+}
+
+.container .sup-text input {
+  margin-bottom: 0;
+}
+
+.container .sup-text p {
+  margin-top: -30px;
+}
+
+label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+/*# sourceMappingURL=form.css.map */

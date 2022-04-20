@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,YADQ,AACP,MAAM,CAAA;EACH,KAAK,EAAE,kBAAkB;CAC5B",
+    "sources": [
+        "../scss/color-hover.scss"
+    ],
+    "names": [],
+    "file": "color-hover.css"
+}

@@ -1,0 +1,45 @@
+.round-item {
+    --size: 10rem;
+    color: var(--color);
+    background: var(--background);
+    border-radius: 50%;
+    display: block;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.1s;
+    svg {
+        width: 40%;
+    }
+    // &:hover {
+    //     color: var(--hover-color);
+    // }
+}
+
+.round-button {
+    --size: 1rem;
+    --color: white;
+    margin: 15px;
+    font-weight: bold;
+    padding: calc(var(--size) * 0.9) calc(var(--size) * 2.5);
+    font-size: var(--size);
+    color: var(--color);
+    cursor: pointer;
+    background-color: var(--background-color);
+    border-radius: calc(var(--size) * 2);
+    letter-spacing: 3px;
+    &:active {
+        background-color: rgba(221, 221, 221, 0.658);
+        // box-shadow: 0 0 2px rgba(0, 0, 0, 0.555), 0 0 3px black;
+    }
+}
+
+.icon {
+    --size: 3rem;
+    cursor: pointer;
+    &:hover {
+        color: var(--hover-color);
+    }
+}

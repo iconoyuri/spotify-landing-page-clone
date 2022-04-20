@@ -1,0 +1,79 @@
+footer {
+    background-color: black;
+    --color: white;
+    padding: 5rem 3rem 2rem 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 1200px;
+        & > div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            gap: 70px;
+            @media screen and (max-width: 1000px){
+                flex-direction: column;
+            }
+        }
+        .footer-list {
+            margin: 0 2rem;
+            padding: 0;
+            --color: #919496;
+        }
+        .social-networks {
+            display: flex;
+            flex-direction: row;
+            --color: #fff;
+            gap: 7px;
+            margin:  10px;
+            .icon {
+                --background: #fff2;
+            }
+        }
+        @media screen and (max-width: 1200px) {
+            width: 1000px;
+            @media screen and (max-width: 1000px) {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+    }
+    .copyright-block {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        width: 100%;
+        bottom: 0;
+        margin-top: 50px;
+    }
+    .privacy-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        float: left;
+    }
+    .copyright {
+        float: right;
+    }
+    .copyright > p,
+    .privacy-list li {
+        font-size: 0.7rem !important;
+        color: #919496;
+        &:hover {
+            color: #1ed760;
+        }
+    }
+    .copyright > p {
+        text-align: right;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 1000px) {
+        padding: 5rem 1rem 1rem 1rem;
+    }
+}

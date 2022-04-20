@@ -1,0 +1,20 @@
+.grey-colored {
+    --color: #d9dadc;
+}
+.black-colored {
+    --color: black;
+}
+.hover-colored:hover {
+    color: #1ed760;
+}
+.linear-background {
+    --background: linear-gradient(45deg, #6c0ee0 -5%, #f037a6);
+}
+.section.linear-background {
+    background-image: url(../src/bubbles-dktp.svg),
+        linear-gradient(45deg, #6c0ee0 -5%, #f037a6);
+    background-size: 1580px 1068px;
+    background-position: center -138px;
+    background-position-x: center;
+    background-position-y: -138px;
+}

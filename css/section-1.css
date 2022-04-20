@@ -1,0 +1,60 @@
+.section-1 {
+  padding: 10rem 4rem 2rem 10rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 250px;
+  overflow: hidden;
+}
+
+.section-1 > div:nth-child(1) {
+  --width: 50%;
+  width: var(--width);
+}
+
+.section-1 > div:nth-child(2) {
+  width: calc(100% - var(--width));
+  margin: 2rem 0;
+}
+
+.section-1 > div:nth-child(2) h1 {
+  margin-bottom: 3rem;
+}
+
+.section-1 .phone {
+  height: 100%;
+  --width: 18rem !important;
+}
+
+.section-1 .phone svg {
+  position: absolute;
+  bottom: -5.8rem;
+  width: var(--width);
+  display: block;
+}
+
+.section-1 .phone img {
+  width: calc(var(--width) - 1rem);
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: translateX(calc(1rem / 2));
+          transform: translateX(calc(1rem / 2));
+}
+
+@media screen and (max-width: 1000px) {
+  .section-1 {
+    padding: 4rem 4rem 2rem 2rem;
+    padding-top: 4rem;
+  }
+  .section-1 .phone {
+    display: none;
+  }
+  .section-1 > div:nth-child(2) {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=section-1.css.map */

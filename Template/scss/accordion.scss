@@ -1,0 +1,74 @@
+$color: #dedfdf;
+* {
+    box-sizing: border-box;
+}
+@import url("//db.onlinewebfonts.com/c/860c3ec7bbc5da3e97233ccecafe512e?family=Circular+Std+Book");
+body {
+    font-family: "circular std book";
+}
+.accordion dd,
+.accordion__panel {
+    background-color: #fff;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+.accordion p {
+    padding: 0em 2em;
+}
+
+.accordion {
+    position: relative;
+    background-color: #fff;
+}
+.accordionTitle,
+.accordion__Heading {
+    background-color: white;
+    background-color: $color;
+    font-weight: 700;
+    padding: 2em;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    border-top: 1px solid darken($color, 5%);
+    &:before {
+        content: "";
+        background-image: url(../src/chevron-down.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: black;
+        width: 20px;
+        height: 20px;
+        font-size: 1.5em;
+        line-height: 0.5em;
+        float: right;
+    }
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+}
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+    background-color: white;
+    &:before {
+        transform: rotate(-180deg);
+    }
+}
+.accordionItem {
+    height: auto;
+    overflow: hidden;
+
+    max-height: 50em;
+    transition: max-height .5s;
+
+    @media screen and (min-width: 48em) {
+        max-height: 15em;
+        transition: max-height 0.5s;
+    }
+}
+
+.accordionItem.is-collapsed {
+    max-height: 0;
+}
+.no-js .accordionItem.is-collapsed {
+    max-height: auto;
+}

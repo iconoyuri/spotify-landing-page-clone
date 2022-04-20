@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <link
+            rel="stylesheet"
+            href="src/fontawesome-free-5.15.4-web/css/all.min.css"
+        />
+
+        <link rel="stylesheet" href="css/form.css" />
+        <link rel="stylesheet" href="css/headings.css" />
+        <link rel="stylesheet" href="css/round-item.css" />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="input-block">
+                <label for="email">What's your email?</label>
+                <input
+                    type="text"
+                    class="input"
+                    placeholder="Enter your email."
+                />
+                <span
+                    ><i class="fas fa-times"></i> You need to enter your
+                    email.</span
+                >
+            </div>
+            <div class="input-block">
+                <label for="emailConf">Confirm your email</label>
+                <input
+                    id="emailConf"
+                    type="text"
+                    class="input"
+                    placeholder="Enter your email again."
+                />
+                <span
+                    ><i class="fas fa-times"></i> You need to confirm your
+                    email.</span
+                >
+            </div>
+            <div class="input-block">
+                <label for="password">Create a password</label>
+                <input
+                    id="password"
+                    type="password"
+                    class="input"
+                    placeholder="Create a password."
+                />
+                <span
+                    ><i class="fas fa-times"></i> You need to enter a
+                    password.</span
+                >
+            </div>
+            <div class="input-block sup-text">
+                <label for="pseudo">What should we call you?</label>
+                <input
+                    id="pseudo"
+                    type="text"
+                    class="input"
+                    placeholder="Enter a profile name."
+                />
+                <span
+                    ><i class="fas fa-times"></i> This appears on your
+                    profile.</span
+                >
+                <p>This appears on your profile.</p>
+            </div>
+            <p style="font-weight: bold">What's your date of birth?</p>
+            <div class="date-block">
+                <div>
+                    <label for="day">Day</label>
+                    <input
+                        id="day"
+                        type="text"
+                        class="input"
+                        placeholder="DD"
+                    />
+                </div>
+                <div class="month-block">
+                    <label for="month">Month</label>
+                    <select name="" id="month">
+                        <option value="">Janvier</option>
+                        <option value="">Février</option>
+                        <option value="">Mars</option>
+                        <option value="">Avril</option>
+                        <option value="">Mai</option>
+                        <option value="">Juin</option>
+                        <option value="">Juillet</option>
+                        <option value="">Août</option>
+                        <option value="">Septembre</option>
+                        <option value="">Octobre</option>
+                        <option value="">Novembre</option>
+                        <option value="">Décembre</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div>
+                    <label for="year">Year</label>
+                    <input
+                        id="year"
+                        type="text"
+                        class="input"
+                        placeholder="YYYY"
+                    />
+                </div>
+            </div>
+            <p style="font-weight: bold">What's your gender?</p>
+            <div class="radio-block">
+                <label class="radio"
+                    >Male
+                    <input type="radio" name="gender" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="radio"
+                    >Female
+                    <input type="radio" name="gender" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="radio"
+                    >Non-binary
+                    <input type="radio" name="gender" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="checkbox-block">
+                <label class="checkbox"
+                    >Please send me news and offers from Spotify
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                </label>
+                <label class="checkbox"
+                    >Share my registration data with Spotify's content providers
+                    for marketing purposes.
+                    <input type="checkbox" />
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <p class="privacy-policy">
+                By clicking on sign-up, you agree to the
+                <span class="privacy-link">Spotify Terms and Conditions</span>
+                and <span class="privacy-link">Privacy Policy</span>.
+            </p>
+            <div class="sign-in-button">
+                <span class="round-button">Sign up</span>
+            </div>
+            <p class="privacy-policy log-in">
+                Have an account? <span class="privacy-link">Log in</span>.
+            </p>
+        </div>
+    </body>
+</html>
